@@ -1,0 +1,95 @@
+@model IEnumerable<GomezZuñigaAntonio.Models.Perfil_usu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom_perfil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score_total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Division_general)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_registro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Division_musc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score_dm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_dm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_division)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_usu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email_usu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pass_usu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Nom_perfil)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Score_total)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Division_general)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Fecha_registro)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Division_musc)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Score_dm)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Id_dm)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Id_division)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Id_usu)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Email_usu)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Pass_usu)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_perfil">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_perfil">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_perfil">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

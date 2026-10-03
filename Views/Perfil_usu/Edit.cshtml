@@ -1,0 +1,84 @@
+@model GomezZuñigaAntonio.Models.Perfil_usu
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Perfil_usu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_perfil" />
+            <div class="form-group">
+                <label asp-for="Nom_perfil" class="control-label"></label>
+                <input asp-for="Nom_perfil" class="form-control" />
+                <span asp-validation-for="Nom_perfil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score_total" class="control-label"></label>
+                <input asp-for="Score_total" class="form-control" />
+                <span asp-validation-for="Score_total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Division_general" class="control-label"></label>
+                <input asp-for="Division_general" class="form-control" />
+                <span asp-validation-for="Division_general" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha_registro" class="control-label"></label>
+                <input asp-for="Fecha_registro" class="form-control" />
+                <span asp-validation-for="Fecha_registro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Division_musc" class="control-label"></label>
+                <input asp-for="Division_musc" class="form-control" />
+                <span asp-validation-for="Division_musc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score_dm" class="control-label"></label>
+                <input asp-for="Score_dm" class="form-control" />
+                <span asp-validation-for="Score_dm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_dm" class="control-label"></label>
+                <input asp-for="Id_dm" class="form-control" />
+                <span asp-validation-for="Id_dm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_division" class="control-label"></label>
+                <input asp-for="Id_division" class="form-control" />
+                <span asp-validation-for="Id_division" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_usu" class="control-label"></label>
+                <input asp-for="Id_usu" class="form-control" />
+                <span asp-validation-for="Id_usu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email_usu" class="control-label"></label>
+                <input asp-for="Email_usu" class="form-control" />
+                <span asp-validation-for="Email_usu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass_usu" class="control-label"></label>
+                <input asp-for="Pass_usu" class="form-control" />
+                <span asp-validation-for="Pass_usu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
